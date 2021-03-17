@@ -3,10 +3,12 @@ set(BOOST_LIB ${Boost_LIBRARIES} "${CMAKE_THREAD_LIBS_INIT}")
 set(TARGETS
     helloworld
 	async_timer
+    timer_lambda
 	mem_func
 	multithread
-	tcp_client
+	sync_tcp_client
 	sync_tcp_server
+	async_tcp_client
 	async_tcp_server
 )
 

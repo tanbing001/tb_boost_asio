@@ -7,6 +7,13 @@ using boost::asio::ip::tcp;
 
 enum { BUF_SIZE = 1024 };
 
+// tcp client Á÷³Ì
+// 1. io_context
+// 2. resolver  ---> endpoints
+// 3. socket
+// 4. connect
+// 5. read/write
+
 int main(int argc, char* argv[]) {
   try {
     if (argc != 3) {
@@ -26,6 +33,7 @@ int main(int argc, char* argv[]) {
 
     tcp::socket socket(io_context);
     boost::asio::connect(socket, endpoints);
+
     char buf[BUF_SIZE];
     std::size_t length = 0;
     do {
